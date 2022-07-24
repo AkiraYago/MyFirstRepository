@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.46875006, g: 0.23657244, b: 0.23657244, a: 1}
+  m_IndirectSpecularColor: {r: 0.4937228, g: 0.18540153, b: 0.14976963, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -753,8 +753,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 254262036}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: -59.586327, y: -0.69128036, z: 17.83143}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -59.586327, y: 7.0187197, z: 17.83143}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 11112267}
   - {fileID: 235275561812106297}
@@ -763,7 +763,7 @@ Transform:
   - {fileID: 1148080628}
   - {fileID: 1604447676}
   m_Father: {fileID: 1037088195}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &279587923
 GameObject:
@@ -1500,8 +1500,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.25900972, g: 0.6792453, b: 0.22748311, a: 1}
-  m_Intensity: 300
-  m_Range: 100
+  m_Intensity: 10
+  m_Range: 50
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -2537,7 +2537,7 @@ Transform:
   m_Children:
   - {fileID: 537879851}
   m_Father: {fileID: 1037088195}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &913909752
 BoxCollider:
@@ -2664,10 +2664,10 @@ Transform:
   m_Children:
   - {fileID: 47896361}
   - {fileID: 860838745}
-  - {fileID: 254262037}
   - {fileID: 913909751}
   - {fileID: 1668755299}
   - {fileID: 1630669380}
+  - {fileID: 254262037}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4768,7 +4768,7 @@ Transform:
   - {fileID: 2030803710}
   - {fileID: 279587924}
   m_Father: {fileID: 1037088195}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1668755290
 GameObject:
@@ -4949,7 +4949,7 @@ Transform:
   - {fileID: 1738534560}
   - {fileID: 1195327432}
   m_Father: {fileID: 1037088195}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1697985323
 GameObject:
@@ -5460,8 +5460,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.25900972, g: 0.6792453, b: 0.22748311, a: 1}
-  m_Intensity: 3
-  m_Range: 100
+  m_Intensity: 10
+  m_Range: 50
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
