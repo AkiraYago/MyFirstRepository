@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class CrearObstaculos : MonoBehaviour
 {
-    public GameObject obstaculos;
-    public GameObject obstaculos2;
-    public GameObject obstaculos3;
-    GameObject generarObstaculos;
     int contador = 0;
+    public GameObject obstaculos, obstaculos2, obstaculos3;
+    GameObject generarObstaculos;
     public int cantidadObstaculos;
     public int escalaMapa;
     public GameObject enemigo1;
