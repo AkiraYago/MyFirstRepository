@@ -12,6 +12,7 @@ public class CrearObstaculos : MonoBehaviour
     public GameObject enemigo1;
     GameObject generarEnemigo;
     public int cantidadEnemigos;
+
     // Start is called before the first frame update
     void Start()//Cambiar la forma en que aparecen los bloques
     {
