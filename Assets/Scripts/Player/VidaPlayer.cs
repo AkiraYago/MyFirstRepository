@@ -26,6 +26,10 @@ public class VidaPlayer : MonoBehaviour
             //vidaActual -= dañoDeObjetos.dañoAJugador;//cambiar
             vidaActual -= DamageManager.instance.dañoObstaculos;
         }
+        else if (collision.collider.name == "Enemigo1(Clone)")
+        {
+            vidaActual -= DamageManager.instance.dañoEnemigo1;
+        }
     }
     void MuerteJugador()
     {

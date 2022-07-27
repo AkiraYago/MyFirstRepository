@@ -557,7 +557,7 @@ MonoBehaviour:
   "da\xF1oJugador": 70
   "da\xF1oBala": 55
   "da\xF1oObstaculos": 20
-  "da\xF1oEnemigo1": 0
+  "da\xF1oEnemigo1": 20
 --- !u!4 &97641806
 Transform:
   m_ObjectHideFlags: 0
