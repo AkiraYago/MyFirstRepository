@@ -751,9 +751,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transformJugador: {fileID: 0}
   animacion: {fileID: 1282591566425787660}
-  pupilaEnemigo: {fileID: 1282591564856707087}
-  brazos: {fileID: 1282591566418227618}
-  brazosAtack: {fileID: 0}
 --- !u!95 &1282591566425787660
 Animator:
   serializedVersion: 3

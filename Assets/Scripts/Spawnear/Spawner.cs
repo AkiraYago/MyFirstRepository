@@ -2,15 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CrearObstaculos : MonoBehaviour
+public class Spawner : MonoBehaviour
 {
     int contador = 0;
     public GameObject obstaculos, obstaculos2, obstaculos3;
-    GameObject generarObstaculos;
     public int cantidadObstaculos;
     public int escalaMapa;
     public GameObject enemigo1;
-    GameObject generarEnemigo;
     public int cantidadEnemigos;
 
     // Start is called before the first frame update
@@ -38,7 +36,7 @@ public class CrearObstaculos : MonoBehaviour
         {
             float posicionRandomX = Random.Range(-escalaMapa / 2, escalaMapa / 2); 
             float posicionRandomZ = Random.Range(-escalaMapa / 2, escalaMapa / 2); 
-            generarObstaculos = Instantiate(obstaculos, new Vector3(posicionRandomX, 0, posicionRandomZ), transform.rotation);
+            GameObject generarObstaculos = Instantiate(obstaculos, new Vector3(posicionRandomX, 0, posicionRandomZ), transform.rotation);
             generarObstaculos.name += contador;
         }
     }
@@ -46,7 +44,7 @@ public class CrearObstaculos : MonoBehaviour
     {
         for (contador = 0; contador < cantidadEnemigos; contador++)
         {
-            generarEnemigo = Instantiate(enemigo1, new Vector3(Random.Range(-escalaMapa / 2, escalaMapa / 2), 0, Random.Range(-escalaMapa / 2, escalaMapa / 2)), transform.rotation);
+            GameObject generarEnemigo = Instantiate(enemigo1, new Vector3(Random.Range(-escalaMapa / 2, escalaMapa / 2), 0, Random.Range(-escalaMapa / 2, escalaMapa / 2)), transform.rotation);
         }
     }
 }
