@@ -44,7 +44,9 @@ public class Spawner : MonoBehaviour
     {
         for (contador = 0; contador < cantidadEnemigos; contador++)
         {
-            GameObject generarEnemigo = Instantiate(enemigo1, new Vector3(Random.Range(-escalaMapa / 2, escalaMapa / 2), 0, Random.Range(-escalaMapa / 2, escalaMapa / 2)), transform.rotation);
+            Vector3 spawn = new Vector3(Random.Range(-escalaMapa / 2, escalaMapa / 2), 0, Random.Range(-escalaMapa / 2, escalaMapa / 2));
+            Quaternion randomRot = Quaternion.Euler(0, Random.Range(0, 360), 0);
+            GameObject generarEnemigo = Instantiate(enemigo1, spawn, randomRot);
         }
     }
 }

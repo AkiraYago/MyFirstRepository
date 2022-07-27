@@ -5,13 +5,13 @@ using UnityEngine;
 public class VidaPlayer : MonoBehaviour
 {
     public float vidaActual;
-    public float dañoBalaAObstaculos;
-    public float dañoCuerpoAObtaculos;
-    public VidaObjetos dañoDeObjetos;
+    public float dañoBalaAObstaculos; //puedo eliminar esto? si
+    public float dañoCuerpoAObtaculos; //puedo eliminar esto? si 
+    public VidaObjetos dañoDeObjetos; //puedo eliminar esto? si
     // Start is called before the first frame update
     void Start()
     {
-        dañoDeObjetos = FindObjectOfType<VidaObjetos>();
+        dañoDeObjetos = FindObjectOfType<VidaObjetos>();//borrar
     }
 
     // Update is called once per frame
@@ -23,7 +23,8 @@ public class VidaPlayer : MonoBehaviour
     {
         if(collision.collider.tag == "Obstaculos")
         {
-            vidaActual -= dañoDeObjetos.dañoAJugador;
+            //vidaActual -= dañoDeObjetos.dañoAJugador;//cambiar
+            vidaActual -= DamageManager.instance.dañoObstaculos;
         }
     }
     void MuerteJugador()
@@ -33,4 +34,5 @@ public class VidaPlayer : MonoBehaviour
             Destroy(gameObject, 0.2f);
         }
     }
+    //crear funcion que baje vida al jugador (se usara cuando el jugador colisione con un obtaculo y cuando colisione con un enemigo)
 }

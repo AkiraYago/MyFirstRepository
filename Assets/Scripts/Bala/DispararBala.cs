@@ -19,7 +19,7 @@ public class DispararBala : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.tag == "Obstaculos")
+        if (collision.collider.tag == "Obstaculos" || collision.collider.name == "Enemigo1(Clone)")
         {
             Destroy(gameObject, 0.1f);
         }
