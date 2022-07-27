@@ -525,6 +525,53 @@ Transform:
   m_Father: {fileID: 1037088195}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &97641804
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 97641806}
+  - component: {fileID: 97641805}
+  m_Layer: 0
+  m_Name: DamageManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &97641805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97641804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 222489ee964c4de45a0e3532b7383415, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "da\xF1oJugador": 70
+  "da\xF1oBala": 55
+  "da\xF1oObstaculos": 20
+  "da\xF1oEnemigo1": 20
+--- !u!4 &97641806
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97641804}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -14.915228, y: 1.9921052, z: 11.118012}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &204103693
 GameObject:
   m_ObjectHideFlags: 0
@@ -2521,9 +2568,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transformJugador: {fileID: 1419055800}
   animacion: {fileID: 0}
-  pupilaEnemigo: {fileID: 1108303940}
-  brazos: {fileID: 500121400}
-  brazosAtack: {fileID: 1559240659}
 --- !u!4 &913909751
 Transform:
   m_ObjectHideFlags: 0
@@ -3938,7 +3982,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 711b71f46539edb43af1092118c7e130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 30
+  velocidad: 20
   sensibilidad: 10
   rBJugador: {fileID: 1419055802}
   apuntado: {fileID: 204103698}
@@ -5302,9 +5346,9 @@ MonoBehaviour:
   obstaculos2: {fileID: 1251173261377714089, guid: a6e09704c9fdf50448989ed539f6c3cf, type: 3}
   obstaculos3: {fileID: 6355626726324554260, guid: 6b6b3b0b03aed5445a8b5537080aa8e4, type: 3}
   cantidadObstaculos: 30
-  escalaMapa: 1000
+  escalaMapa: 400
   enemigo1: {fileID: 1282591566425787659, guid: 6524c2c0ad4d1c345a3254d9d8953dad, type: 3}
-  cantidadEnemigos: 10
+  cantidadEnemigos: 5
 --- !u!65 &1872873597
 BoxCollider:
   m_ObjectHideFlags: 0

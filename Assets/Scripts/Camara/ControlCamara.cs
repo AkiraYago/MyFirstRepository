@@ -19,10 +19,8 @@ public class ControlCamara : MonoBehaviour
     void RotarCamara()
     {
         float mouseX = Input.GetAxis("Mouse X");
-        Debug.Log(mouseX);
         if (Input.GetMouseButton(1) && mouseX != 0)
         {
-            Debug.Log("Hola");
             transform.Rotate(0, mouseX * sensibilidadCam * Time.deltaTime, 0);
         }
     }

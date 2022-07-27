@@ -7,7 +7,7 @@ public class ModoEnemigo : MonoBehaviour
     //Si el jugador choca con el enemigo el enemigo se queda congelado
     public Tarjet transformJugador; //Cambiar nombre por perseguir a
     public Animator animacion;
-    float enemySpeed = 1;
+    float enemySpeed = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,20 +30,30 @@ public class ModoEnemigo : MonoBehaviour
     void Modos()
     {
         float distanciaJugador = Vector3.Distance(transform.position, transformJugador.rotacionJugador.position);
-        if (distanciaJugador <= 40)
+        if (distanciaJugador <= 40 && distanciaJugador >= 15)
         {
+            enemySpeed = 1;
+            animacion.SetBool("puedeAtacar", false);
             animacion.SetBool("patrullando", false); //Desactivar patrullaje
             Debug.Log("Enemigo modo ataque");
             transform.LookAt(transformJugador.rotacionJugador);
             transform.position = Vector3.Lerp(transform.position, transformJugador.rotacionJugador.position, enemySpeed * Time.deltaTime);
-            if (distanciaJugador <= 10)
+            /*if (distanciaJugador <= 5)
             {
                 enemySpeed = 0;
+                animacion.SetBool("puedeAtacar", true);
+                //Ejecutar animacion de ataque y lo de arriba dara problemas
             }
             else
             {
                 enemySpeed = 1;
-            }
+                animacion.SetBool("puedeAtacar", false);//ERROR SE ACTIVA EL MODO NEUTRAL
+            }*/
+        }
+        else if (distanciaJugador < 15)
+        {
+            enemySpeed = 0;
+            animacion.SetBool("puedeAtacar", true);
         }
         else
         {

@@ -2,23 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnearEnemigos : MonoBehaviour
+public class DamageManager : MonoBehaviour
 {
-    public GameObject enemigo1;
-    GameObject generarEnemigo;
+    public static DamageManager instance;
+    public float dañoJugador, dañoBala, dañoObstaculos, dañoEnemigo1;
     // Start is called before the first frame update
     void Start()
     {
-        
+        instance = this;
     }
 
     // Update is called once per frame
     void Update()
     {
         
-    }
-    void Spawn()
-    {
-        generarEnemigo = Instantiate(enemigo1, transform.position, transform.rotation);
     }
 }

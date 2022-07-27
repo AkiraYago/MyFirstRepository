@@ -5,12 +5,12 @@ using UnityEngine;
 public class VidaObjetos : MonoBehaviour
 {
     public float vidaActual;
-    public float dañoAJugador;
-    public VidaPlayer dañoDelJugador;
+    public float dañoAJugador;//borrar
+    public VidaPlayer dañoDelJugador;//borrar
     // Start is called before the first frame update
     void Start()
     {
-        dañoDelJugador = FindObjectOfType<VidaPlayer>();
+        dañoDelJugador = FindObjectOfType<VidaPlayer>();//borrar
     }
 
     // Update is called once per frame
@@ -31,12 +31,14 @@ public class VidaObjetos : MonoBehaviour
         if (collision.collider.name == "Jugador")
         {
             Debug.Log("El jugador esta chocando con" + gameObject.name);
-            vidaActual -= dañoDelJugador.dañoCuerpoAObtaculos;
+            //vidaActual -= dañoDelJugador.dañoCuerpoAObtaculos;//cambiar
+            vidaActual -= DamageManager.instance.dañoJugador;
         }
         else if (collision.collider.name == "Bullet(Clone)")
         {
             Debug.Log("El jugador esta disparando a " + gameObject.name);
-            vidaActual -= dañoDelJugador.dañoBalaAObstaculos;
+            //vidaActual -= dañoDelJugador.dañoBalaAObstaculos;//cambiar
+            vidaActual -= DamageManager.instance.dañoBala;
         }
     }
 }
