@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class PlayerMov : MonoBehaviour
 {
+    public static PlayerMov instance;
     public float velocidad;
     public float sensibilidad;
     public Rigidbody rBJugador;
-    public Transform apuntado;
-    private void FixedUpdate()
+    public Transform Jugador; //obtener componente en el modo enemigo
+    void Start()
+    {
+        instance = this;
+    }
+    void FixedUpdate()
     {
         Movimiento();
         //Agregar Sprint?

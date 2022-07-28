@@ -698,6 +698,7 @@ GameObject:
   - component: {fileID: 1282591566425787661}
   - component: {fileID: 1282591566425787660}
   - component: {fileID: 7288528684116111069}
+  - component: {fileID: -2117359995157966652}
   m_Layer: 0
   m_Name: Enemigo1
   m_TagString: Untagged
@@ -750,7 +751,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e0cfe54bbe743c4a867cab8e35b5682, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transformJugador: {fileID: 0}
   animacion: {fileID: 1282591566425787660}
 --- !u!95 &1282591566425787660
 Animator:
@@ -784,6 +784,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vidaEnemigo: 500
+--- !u!114 &-2117359995157966652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282591566425787659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 823e0e4019ddbc34094f0c05da29d513, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1282591566476847568
 GameObject:
   m_ObjectHideFlags: 0

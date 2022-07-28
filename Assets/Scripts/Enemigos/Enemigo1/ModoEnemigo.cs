@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class ModoEnemigo : MonoBehaviour
 {
-    //Si el jugador choca con el enemigo el enemigo se queda congelado
-    public Tarjet transformJugador; //Cambiar nombre por perseguir a
     public Animator animacion;
     float enemySpeed = 0;
     // Start is called before the first frame update
     void Start()
     {
-        transformJugador = FindObjectOfType<Tarjet>();
+        
     }
 
     // Update is called once per frame
@@ -29,26 +27,15 @@ public class ModoEnemigo : MonoBehaviour
     }
     void Modos()
     {
-        float distanciaJugador = Vector3.Distance(transform.position, transformJugador.rotacionJugador.position);
+        float distanciaJugador = Vector3.Distance(transform.position, PlayerMov.instance.Jugador.position);
         if (distanciaJugador <= 40 && distanciaJugador >= 15)
         {
             enemySpeed = 1;
             animacion.SetBool("puedeAtacar", false);
             animacion.SetBool("patrullando", false); //Desactivar patrullaje
             Debug.Log("Enemigo modo ataque");
-            transform.LookAt(transformJugador.rotacionJugador);
-            transform.position = Vector3.Lerp(transform.position, transformJugador.rotacionJugador.position, enemySpeed * Time.deltaTime);
-            /*if (distanciaJugador <= 5)
-            {
-                enemySpeed = 0;
-                animacion.SetBool("puedeAtacar", true);
-                //Ejecutar animacion de ataque y lo de arriba dara problemas
-            }
-            else
-            {
-                enemySpeed = 1;
-                animacion.SetBool("puedeAtacar", false);//ERROR SE ACTIVA EL MODO NEUTRAL
-            }*/
+            transform.LookAt(PlayerMov.instance.Jugador);
+            transform.position = Vector3.Lerp(transform.position, PlayerMov.instance.Jugador.position, enemySpeed * Time.deltaTime);
         }
         else if (distanciaJugador < 15)
         {
